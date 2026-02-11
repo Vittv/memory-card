@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	/* not sure why this is a vite react template default */
+	/* this causes things to not take full width: */
+	/* place-items: center; */
+	/* everything else is fine */
+	min-width: 320px;
+	min-height: 100vh;
+  width: 100%;
+  /* background: url(../../public/wallhaven-m9pk9y.jpg); */
+  background: url(../../public/wallhaven-4y5dyg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,83 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+  background-color: rgba(94, 112, 171, 0.8);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+}
+
+.playerScore {
+	display: flex;
+	flex-direction: column;
+}
+
+.scoreboard {
+	display: flex;
+	justify-content: space-between;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(6, 1fr); */
+  padding: 1rem 0;
+	gap: 1rem;
+}
+
+.card {
+  cursor: pointer;
+  border: solid 1px rgba(150, 150, 150, 0.9);
+  border-radius: 10px;
+  background-color: rgba(94, 112, 171, 0.8);
+  /* background-color: rgba(64, 76, 115, 0.6); */
+  backdrop-filter: blur(20px);
+  transition: transform 0.2s ease;
+}
+
+.card h2 {
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: yellow
+}
+
+.card img {
+	width: 100%;
+}
+
+@media (max-width: 800px) {
+  .board {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
