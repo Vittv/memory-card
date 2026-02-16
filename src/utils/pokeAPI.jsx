@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { pokemonList } from "../data/pokeList";
 
 function useFetchPokeAPI() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 

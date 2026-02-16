@@ -1,13 +1,27 @@
 function PlayerScore({ score, bestScore }) {
   return (
-    <div className="playerScore">
-      <h1 className="title">Pokémon Memory Game</h1>
+    <>
+      <a
+        className="github"
+        target="_blank"
+        rel="noreferrer noopener"
+        href="https://github.com/Vittv/memory-card.git"
+      >
+        <img
+          src="pokemon-logo.png"
+          alt="Pokémon Memory Game"
+          className="logo"
+        />
+      </a>
       <div className="scoreboard">
-        <p className="github">Github</p>
-        <p className="score">Score: {score}</p>
-        <p className="bestscore">Best Score: {bestScore}</p>
+        <p className="score">
+          Score: <span className="scorenumber">{score}</span>
+        </p>
+        <p className="bestscore">
+          Best Score: <span className="bestscorenumber">{bestScore}</span>
+        </p>
       </div>
-    </div>
+    </>
   );
 }
 

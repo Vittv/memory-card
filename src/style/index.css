@@ -30,16 +30,34 @@ a:hover {
 
 body {
 	margin: 0;
-	/* not sure why this is a vite react template default */
-	/* this causes things to not take full width: */
-	/* place-items: center; */
-	/* everything else is fine */
 	min-width: 320px;
 	min-height: 100vh;
-  width: 100%;
-  /* background: url(../../public/wallhaven-m9pk9y.jpg); */
-  background: url(../../public/wallhaven-4y5dyg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	width: 100%;
+	position: relative;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(wallhaven-0j2qxy_1920x1080.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 150, 255, 0.15);
+	z-index: -1;
+	pointer-events: none;
 }
