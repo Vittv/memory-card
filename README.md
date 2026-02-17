@@ -13,6 +13,8 @@ npm install
 ```
 
 Then you can open the local server with:
-`npm run dev`
+```
+npm run dev
+```
 
 It should then be available at `http://localhost:5173`.
