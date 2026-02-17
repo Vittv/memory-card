@@ -7,6 +7,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [clickedPokemon, setClickedPokemon] = useState([]);
+  const [hasWon, setHasWon] = useState(false);
 
   const handleCardClick = (pokemonId) => {
     if (clickedPokemon.includes(pokemonId)) {
@@ -23,12 +24,15 @@ function App() {
 
       if (newScore === 12) {
         setBestScore(12);
-        alert("You won!");
-
-        setScore(0);
-        setClickedPokemon([]);
+        setHasWon(true);
       }
     }
+  };
+
+  const handlePlayAgain = () => {
+    setHasWon(false);
+    setScore(0);
+    setClickedPokemon([]);
   };
 
   return (
@@ -36,9 +40,16 @@ function App() {
       <div className="navbar">
         <PlayerScore score={score} bestScore={bestScore} />
       </div>
-      <div className="board">
-        <Cards onCardClick={handleCardClick} />
-      </div>
+      {hasWon ? (
+        <div className="win-screen">
+          <h2>You won!</h2>
+          <button onClick={handlePlayAgain}>Play Again</button>
+        </div>
+      ) : (
+        <div className="board">
+          <Cards onCardClick={handleCardClick} />
+        </div>
+      )}
     </div>
   );
 }
